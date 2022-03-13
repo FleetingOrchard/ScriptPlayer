@@ -93,6 +93,7 @@
                         </Style>
                     </Button.Style>
                 </Button>
+                <Button Width="30" Command="{Binding SeekFileStartCommand}" ToolTip="Seek File Start" Content="7" />
                 <Button Width="30" Command="{Binding SkipToNextEventCommand}" ToolTip="Skip close to next event" viewModels:SettingsPage.PageName="Gaps" Content="8"/>
                 <Button Width="30" Command="{Binding Playlist.PlayPreviousEntryCommand}" Content="9" 
                     ToolTipService.BetweenShowDelay="0" ToolTipService.ShowDuration="60000">

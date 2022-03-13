@@ -21,6 +21,7 @@ namespace ScriptPlayer.ViewModels
 
         public ScriptplayerCommand TogglePlaybackCommand { get; set; }
 
+        public ScriptplayerCommand SeekFileStartCommand { get; set; }
         public ScriptplayerCommand SkipToNextEventCommand { get; set; }
 
         public ScriptplayerCommand StartScanningButtplugCommand { get; set; }
@@ -254,6 +255,12 @@ namespace ScriptPlayer.ViewModels
                 DisplayText = "Start Scanning Buttplug"
             };
 
+            SeekFileStartCommand = new ScriptplayerCommand(SeekFileStartEvent)
+            {
+                CommandId = "SeekFileStartEvent",
+                DisplayText = "Seek File Start"
+            };
+
             SkipToNextEventCommand = new ScriptplayerCommand(SkipToNextEvent, CanSkipToNextEvent)
             {
                 CommandId = "SkipToNextEvent",
@@ -316,6 +323,7 @@ namespace ScriptPlayer.ViewModels
             GlobalCommandManager.RegisterCommand(ConnectButtplugCommand);
             GlobalCommandManager.RegisterCommand(DisconnectButtplugCommand);
             GlobalCommandManager.RegisterCommand(StartScanningButtplugCommand);
+            GlobalCommandManager.RegisterCommand(SeekFileStartCommand);
             GlobalCommandManager.RegisterCommand(SkipToNextEventCommand);
             GlobalCommandManager.RegisterCommand(TogglePlaybackCommand);
             GlobalCommandManager.RegisterCommand(VolumeUpCommand);

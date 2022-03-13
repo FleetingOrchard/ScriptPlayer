@@ -4012,6 +4012,11 @@ namespace ScriptPlayer.ViewModels
             }
         }
 
+        public void SeekFileStartEvent()
+        {
+            SeekFileStartEventInternal();
+        }
+
         public void SkipToNextEvent()
         {
             if (Settings.RandomChapters)
@@ -4264,6 +4269,18 @@ namespace ScriptPlayer.ViewModels
             }
 
             return fastestChapter;
+        }
+
+        public void SeekFileStartEventInternal()
+        {
+            if (IsSeeking || IsTransistioning)
+                return;
+
+            if (TimeSpan.FromSeconds(2) > TimeSource.Progress)
+                return;
+
+            // Hard-cut to file start
+            SkipTo(TimeSpan.Zero, false, TimeSpan.Zero);
         }
 
         public void SkipToNextEventInternal()

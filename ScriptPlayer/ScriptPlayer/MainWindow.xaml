@@ -508,6 +508,7 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Button ToolTip="Seek File Start" Command="{Binding SeekFileStartCommand}" Style="{StaticResource MediaControlButton}" Content="7" />
             <Button 
                 Style="{StaticResource MediaControlButton}"
                 Command="{Binding SkipToNextEventCommand}" ToolTip="Skip close to next event" viewModels:SettingsPage.PageName="Gaps" Content="8"/>
