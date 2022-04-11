@@ -14,7 +14,7 @@
         DataContext="{Binding RelativeSource={RelativeSource Self}, Path=ViewModel}"
         Focusable="False"
         AllowsTransparency="True"
-        Title="{Binding Title}" Height="80"  MinHeight="80" MaxHeight="80" MinWidth="250" Width="250" Loaded="Window_Loaded" WindowStartupLocation="CenterOwner" ResizeMode="CanResizeWithGrip">
+        Title="{Binding Title}" Height="80"  MinHeight="80" MaxHeight="80" MinWidth="260" Width="260" Loaded="Window_Loaded" WindowStartupLocation="CenterOwner" ResizeMode="CanResizeWithGrip">
     <Window.Resources>
         <converters:TimeLeftConverter x:Key="TimeLeftConverter"/>
         <converters1:ConversionModeToNameConverter x:Key="ConversionConverter"/>
