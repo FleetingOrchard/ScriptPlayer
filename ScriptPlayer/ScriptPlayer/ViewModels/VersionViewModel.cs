@@ -186,7 +186,7 @@ namespace ScriptPlayer.ViewModels
                     }
                     else
                     {
-                        VersionText = "There is a new version available!";
+                        VersionText = $"Latest update: {latestVersion?.CreatedAt ?? new DateTimeOffset():yyyy/MM/dd}";
                     }
                 }
                 else
